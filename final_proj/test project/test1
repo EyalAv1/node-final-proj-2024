@@ -1,0 +1,40 @@
+http://localhost:3000
+
+testing getting the about
+-------------------------
+url=http://localhost:3000/about/
+data.status_code=200
+b'[{"firstname":"Itay","lastname":"Vekselbum","id":234234,"email":"etay2010@gmail.com"},{"firstname":"Dor","lastname":"Bergel","id":234234,"email":"dor.bergel9@gmail.com"},{"firstname":"Eyal","lastname":"Avni","id":234234,"email":"eyalavni6@gmail.com"}]'
+data.text=[{"firstname":"Itay","lastname":"Vekselbum","id":234234,"email":"etay2010@gmail.com"},{"firstname":"Dor","lastname":"Bergel","id":234234,"email":"dor.bergel9@gmail.com"},{"firstname":"Eyal","lastname":"Avni","id":234234,"email":"eyalavni6@gmail.com"}]
+[{'firstname': 'Itay', 'lastname': 'Vekselbum', 'id': 234234, 'email': 'etay2010@gmail.com'}, {'firstname': 'Dor', 'lastname': 'Bergel', 'id': 234234, 'email': 'dor.bergel9@gmail.com'}, {'firstname': 'Eyal', 'lastname': 'Avni', 'id': 234234, 'email': 'eyalavni6@gmail.com'}]
+firstname=Itay
+lastname=Vekselbum
+id=234234
+Itay Vekselbum 234234
+
+
+testing getting the report - 1
+------------------------------
+url=http://localhost:3000/report/?user_id=123123&year=2023&month=3
+data.status_code=200
+b'{"food":[],"health":[],"housing":[],"sport":[],"education":[],"transportation":[],"other":[]}'
+data.text={"food":[],"health":[],"housing":[],"sport":[],"education":[],"transportation":[],"other":[]}
+[]
+
+
+testing adding cost
+-------------------
+url=http://localhost:3000/addcost/
+data.status_code=200
+b'<!DOCTYPE html><html><head><title>Cost Management</title><link rel="stylesheet" href="/stylesheets/style.css"></head><body><h1>Cost Management</h1><p>Welcome to Cost Management</p></body></html>'
+data.text=<!DOCTYPE html><html><head><title>Cost Management</title><link rel="stylesheet" href="/stylesheets/style.css"></head><body><h1>Cost Management</h1><p>Welcome to Cost Management</p></body></html>
+
+
+testing getting the report - 1
+------------------------------
+url=http://localhost:3000/report/?user_id=123123&year=2024&month=4
+data.status_code=200
+b'{"food":[{"day":2,"description":"milk 9","sum":8},{"day":2,"description":"milk 9","sum":8}],"health":[],"housing":[],"sport":[],"education":[],"transportation":[],"other":[]}'
+data.text={"food":[{"day":2,"description":"milk 9","sum":8},{"day":2,"description":"milk 9","sum":8}],"health":[],"housing":[],"sport":[],"education":[],"transportation":[],"other":[]}
+[{'day': 2, 'description': 'milk 9', 'sum': 8}, {'day': 2, 'description': 'milk 9', 'sum': 8}]
+
